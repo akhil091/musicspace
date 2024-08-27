@@ -1,0 +1,144 @@
+$icon-size: 2.5rem; // Base icon size
+$bg-color: #ffffff20;
+$hover-bg-color: #ffffff30;
+$text-color: #ffffff;
+$text-opacity: 0.9;
+
+//classes of the react-h5-audio-player - AudioPlayercomponent
+.rhap_container {
+    background-color: transparent;
+    color: $text-color;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin-top: 20px;
+  
+    .rhap_progress-bar-show-download {
+      background-color: transparent;
+    }
+  
+    .rhap_progress-bar {
+      background-color: #ffffff30;
+    }
+  
+    .rhap_progress-filled {
+      background-color: $text-color;
+    }
+  
+    .rhap_progress-indicator,
+    .rhap_time {
+      display: none;
+    }
+  
+    .rhap_main-controls-button {
+      color: $text-color;
+    }
+  
+    .rhap_volume-button,
+    .rhap_repeat-button,
+    .rhap_additional-controls-button {
+      color: $text-color;
+      font-size: 1.5rem;
+    }
+  
+    .rhap_controls-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+  
+    .rhap_progress-container {
+      margin: 0;
+      flex-grow: 1;
+    }
+}
+  
+  .rhap_main-controls {
+    width: 150px !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .rhap_main-controls-button {
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+  }
+  
+  .rhap_volume-container {
+    width: fit-content !important;
+    min-width: fit-content;
+    max-width: fit-content;
+    height: fit-content;
+  }
+  
+  .rhap_volume-button {
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+  }
+  
+  .rhap_button-clear {
+    overflow: visible;
+  }
+  
+  .rhap_container {
+    .rhap_volume-bar-area {
+      display: none;
+      width: 0;
+    }
+  }
+
+// Mixins
+@mixin icon-style($bg-color, $hover-bg-color, $icon-color) {
+  background-color: $bg-color;
+  &:hover {
+    background-color: $hover-bg-color;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: $icon-size;
+  width: $icon-size;
+  color: $icon-color;
+}
+
+.player-container {
+  @apply w-full h-screen md:w-2/5 flex flex-col justify-center items-center p-6 relative;
+
+  .sidebar-toggle {
+    @include icon-style($bg-color, $hover-bg-color, $text-color);
+    @apply p-0 border-none bg-transparent outline-none cursor-pointer absolute top-4 left-6 md:hidden;
+  }
+
+  .song-info {
+    @apply w-full max-w-sm;
+    
+    h1 {
+      @apply text-white text-2xl leading-9 font-bold;
+    }
+
+    p {
+      @apply text-white opacity-60 text-base mt-1 mb-6;
+    }
+    
+    img {
+      @apply w-full h-80 md:h-96 lg:h-96 max-w-sm max-h-[430px] rounded-lg mt-6;
+    }
+  }
+
+  .empty-state {
+    @apply w-full h-full flex flex-col justify-center items-center;
+
+    .compact-disc {
+      @apply text-white opacity-25 text-6xl;
+    }
+
+    p {
+      @apply text-white opacity-90 text-base mt-4;
+    }
+  }
+}
