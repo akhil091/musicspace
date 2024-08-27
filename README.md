@@ -1,9 +1,33 @@
-# Getting Started with Create React App
+## Music Player UI - Musicspace
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Screenshot 2024-08-27 212056](https://github.com/user-attachments/assets/37d6d5a1-e013-459c-b07b-0a4696be94ae)
 
-## Available Scripts
+This project is a Spotify-like music player built with React. The application allows users to play music, navigate between tracks, control volume, and view song details. It features a responsive design, fluid animations, and custom background color gradients based on the album cover. The app is built to match a provided Figma design and uses a REST API to load song data.
 
+**API used:** https://cms.samespace.com/items/songs
+
+## Features
+
+- **Music Playback**: Play, pause, and skip tracks with custom controls.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
+- **Custom Hooks**: Utilizes React custom hooks for song navigation and state management.
+- **Search Functionality**: Filters songs based on user input.
+- **Dynamic Background**: Changes background color based on the album cover.
+- **API Integration**: Fetches song data from a REST API.
+- **Tab Navigation**: Navigate between different music categories.
+- **Music Persistence**: Music playback persists across tab changes.
+
+## Technologies Used
+
+- **React**: Core library for building the user interface.
+- **Anime.js**: For handling animations.
+- **Tailwind CSS**: For styling and layout.
+- **React H5 Audio Player**: For the audio player component.
+- **react-icons** : For icons.
+- **REST API**: For loading song data and album covers.
+
+
+## Setup Instructions
 In the project directory, you can run:
 
 ### `npm start`
